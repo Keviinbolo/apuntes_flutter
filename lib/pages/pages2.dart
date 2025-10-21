@@ -8,12 +8,97 @@ class Pages2 extends StatefulWidget {
 }
 
 class _Pages2State extends State<Pages2> {
+  String nombre = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          Text("Bienvenido")
+          Text("Bienvenido$nombre"),
+          Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Informacio Incial", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Columns Y Rows", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Botones", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Cambio de Pagina", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("textFields", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("WidgetPersonalizados", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Funciones", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {});
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.black,
+                  child: Text("Listas", style: TextStyle(color: Colors.white),),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
