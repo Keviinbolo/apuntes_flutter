@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
 class TextfieldPersonalizado extends StatelessWidget {
+  final String labelname;
   final TextEditingController valorCampo;
-  const TextfieldPersonalizado({super.key, required this.valorCampo});
+  final String hintText;
+  const TextfieldPersonalizado({
+    super.key, 
+    required this.valorCampo,
+    this.labelname = "Nombre",
+    this.hintText = "Escribe tu nombre",
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: TextField(
-          decoration: InputDecoration(
-            label: Text("Nombre"),
-            border: OutlineInputBorder(),
-            hintText: "Escribe tu nombre",
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: TextField(
+        controller: valorCampo,
+        decoration: InputDecoration(
+          label: Text(labelname),
+          border: const OutlineInputBorder(),
+          hintText: hintText,
         ),
       ),
     );
