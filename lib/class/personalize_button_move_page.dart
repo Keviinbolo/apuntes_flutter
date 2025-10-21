@@ -1,16 +1,19 @@
 import 'package:apuntes_flutter/pages/pages1.dart';
+import 'package:apuntes_flutter/pages/pages2.dart';
 import 'package:flutter/material.dart';
 
 class PersonalizeButtonMovePage extends StatelessWidget {
   final String labelname;
   final double fontsize;
   final Color color;
-  final Pages1 page = const Pages1();
+
+  final Function() cambioPagina;
   const PersonalizeButtonMovePage({
     super.key,
     required this.labelname,
     this.fontsize = 16,
     this.color = Colors.blue,
+    required this.cambioPagina,
   });
 
   @override
@@ -18,13 +21,7 @@ class PersonalizeButtonMovePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
-        onPressed: () {
-          //Acción del botón
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => page),
-          );
-        },
+        onPressed: cambioPagina,
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
