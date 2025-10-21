@@ -1,5 +1,6 @@
 import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
 import 'package:apuntes_flutter/class/textfield_personalizado.dart';
+import 'package:apuntes_flutter/pages/pages2.dart';
 import 'package:flutter/material.dart';
 
 class Pages1 extends StatefulWidget {
@@ -49,6 +50,12 @@ class _MyWidgetState extends State<Pages1> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PersonalizeButtonMovePage(
+                      cambioPagina: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Pages2()),
+                        );
+                      },
                       labelname: "Registrarse",
                       fontsize: 20,
                       color: Colors.white,
