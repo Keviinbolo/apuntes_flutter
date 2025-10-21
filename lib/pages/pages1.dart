@@ -1,3 +1,4 @@
+import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
 import 'package:apuntes_flutter/class/textfield_personalizado.dart';
 import 'package:flutter/material.dart';
 
@@ -19,18 +20,39 @@ class _MyWidgetState extends State<Pages1> {
             child: Column(
               children: [
                 const Text(
-                  "Registro",
+                  "REGISTRO",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Column(
+                Row(
                   children: [
-                    TextfieldPersonalizado(valorCampo: TextEditingController(), hintText: "Introduce tu nombre",),
-                    SizedBox(width: 10,),
-                    TextfieldPersonalizado(valorCampo: TextEditingController(), labelname: "Correo Electrónico", hintText: "Introduce tu correo electrónico",),
+                    Expanded(
+                      child: TextfieldPersonalizado(
+                        valorCampo: TextEditingController(),
+                        hintText: "Introduce tu nombre",
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: TextfieldPersonalizado(
+                        valorCampo: TextEditingController(),
+                        labelname: "Correo Electrónico",
+                        hintText: "Introduce tu correo electrónico",
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PersonalizeButtonMovePage(
+                      labelname: "Registrarse",
+                      fontsize: 20,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ],
