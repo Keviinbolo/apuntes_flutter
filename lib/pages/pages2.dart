@@ -1,5 +1,5 @@
 import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
-import 'package:apuntes_flutter/pages/InformacionInicial.dart';
+import 'package:apuntes_flutter/pages/informacionincial.dart';
 import 'package:flutter/material.dart';
 
 class Pages2 extends StatefulWidget {
