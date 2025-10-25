@@ -1,6 +1,5 @@
 import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
 import 'package:apuntes_flutter/pages/InformacionInicial.dart';
-import 'package:apuntes_flutter/pages/pages1.dart';
 import 'package:flutter/material.dart';
 
 class Pages2 extends StatefulWidget {
@@ -20,18 +19,19 @@ class _Pages2State extends State<Pages2> {
           Text("Bienvenido$nombre"),
           Row(
             children: [
-            
-             PersonalizeButtonMovePage(
-                      cambioPagina: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Informacioninicial()),
-                        );
-                      },
-                      labelname: "Informacion Inicial",
-                      fontsize: 20,
-                      color: Colors.white,
+              PersonalizeButtonMovePage(
+                cambioPagina: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Informacioninicial(),
                     ),
+                  );
+                },
+                labelname: "Informacion Inicial",
+                fontsize: 20,
+                color: Colors.white,
+              ),
               GestureDetector(
                 onTap: () {
                   setState(() {});
@@ -39,7 +39,10 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("Columns Y Rows", style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    "Columns Y Rows",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               GestureDetector(
@@ -49,7 +52,7 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("Botones", style: TextStyle(color: Colors.white),),
+                  child: Text("Botones", style: TextStyle(color: Colors.white)),
                 ),
               ),
               GestureDetector(
@@ -59,7 +62,10 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("Cambio de Pagina", style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    "Cambio de Pagina",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               GestureDetector(
@@ -69,7 +75,10 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("textFields", style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    "textFields",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               GestureDetector(
@@ -79,7 +88,10 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("WidgetPersonalizados", style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    "WidgetPersonalizados",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               GestureDetector(
@@ -89,7 +101,10 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("Funciones", style: TextStyle(color: Colors.white),),
+                  child: Text(
+                    "Funciones",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               GestureDetector(
@@ -99,7 +114,7 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text("Listas", style: TextStyle(color: Colors.white),),
+                  child: Text("Listas", style: TextStyle(color: Colors.white)),
                 ),
               ),
             ],
