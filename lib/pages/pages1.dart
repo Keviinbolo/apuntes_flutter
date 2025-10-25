@@ -4,8 +4,9 @@ import 'package:apuntes_flutter/pages/pages2.dart';
 import 'package:flutter/material.dart';
 
 class Pages1 extends StatefulWidget {
-  const Pages1({super.key});
-
+  Pages1({super.key});
+  final TextEditingController name = TextEditingController();
+  final TextEditingController email = TextEditingController();
   @override
   State<Pages1> createState() => _MyWidgetState();
 }
@@ -32,14 +33,14 @@ class _MyWidgetState extends State<Pages1> {
                   children: [
                     Expanded(
                       child: TextfieldPersonalizado(
-                        valorCampo: TextEditingController(),
+                        valorCampo: widget.name,
                         hintText: "Introduce tu nombre",
                       ),
                     ),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextfieldPersonalizado(
-                        valorCampo: TextEditingController(),
+                        valorCampo: widget.email,
                         labelname: "Correo Electrónico",
                         hintText: "Introduce tu correo electrónico",
                       ),
@@ -51,9 +52,22 @@ class _MyWidgetState extends State<Pages1> {
                   children: [
                     PersonalizeButtonMovePage(
                       cambioPagina: () {
+                        if (widget.name.text.isEmpty ||
+                            widget.email.text.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Por favor, completa todos los campos",
+                              ),
+                            ),
+                          );
+                          return;
+                        }
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const Pages2()),
+                          MaterialPageRoute(
+                            builder: (context) => const Pages2(),
+                          ),
                         );
                       },
                       labelname: "Registrarse",
