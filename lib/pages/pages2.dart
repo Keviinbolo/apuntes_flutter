@@ -15,96 +15,124 @@ class _Pages2State extends State<Pages2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text("Bienvenido$nombre"),
-          Row(
-            children: [
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Bienvenido$nombre",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30),
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                childAspectRatio: 2.0,
+                children: [
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Informacion Inicial",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Columns Y Rows",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Botones",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
             
-             PersonalizeButtonMovePage(
-                      cambioPagina: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Informacioninicial()),
-                        );
-                      },
-                      labelname: "Informacion Inicial",
-                      fontsize: 20,
-                      color: Colors.white,
-                    ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Columns Y Rows", style: TextStyle(color: Colors.white),),
-                ),
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Cambio de Pagina",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+            
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "TextFields",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+                  
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "WidgetPersonalizados",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+            
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Funciones",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+            
+                  PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                      );
+                    },
+                    labelname: "Listas",
+                    fontsize: 16,
+                    color: Colors.white,
+                  ),
+                ],
               ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Botones", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Cambio de Pagina", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("textFields", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("WidgetPersonalizados", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Funciones", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Listas", style: TextStyle(color: Colors.white),),
-                ),
-              ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
