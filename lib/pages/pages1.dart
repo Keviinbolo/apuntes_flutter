@@ -4,6 +4,7 @@ import 'package:apuntes_flutter/pages/pages2.dart';
 import 'package:flutter/material.dart';
 
 class Pages1 extends StatefulWidget {
+
   const Pages1({super.key});
 
   @override

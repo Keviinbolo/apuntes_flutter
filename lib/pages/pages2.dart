@@ -22,7 +22,7 @@ class _Pages2State extends State<Pages2> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Bienvenido$nombre",
+              "Bienvenido $nombre",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 30),
@@ -37,7 +37,7 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>  Informacioninicial()),
                       );
                     },
                     labelname: "Informacion Inicial",
@@ -49,10 +49,10 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>  Informacioninicial()),
                       );
                     },
-                    labelname: "Columns Y Rows",
+                    labelname: "Columns,Rows y Stacks",
                     fontsize: 16,
                     color: Colors.white,
                   ),
@@ -61,7 +61,7 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>  Informacioninicial()),
                       );
                     },
                     labelname: "Botones",
@@ -73,7 +73,7 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>  Informacioninicial()),
                       );
                     },
                     labelname: "Cambio de Pagina",
@@ -85,22 +85,10 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) => Informacioninicial()),
                       );
                     },
                     labelname: "TextFields",
-                    fontsize: 16,
-                    color: Colors.white,
-                  ),
-                  
-                  PersonalizeButtonMovePage(
-                    cambioPagina: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
-                      );
-                    },
-                    labelname: "WidgetPersonalizados",
                     fontsize: 16,
                     color: Colors.white,
                   ),
@@ -109,7 +97,7 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>  Informacioninicial()),
                       );
                     },
                     labelname: "Funciones",
@@ -121,7 +109,7 @@ class _Pages2State extends State<Pages2> {
                     cambioPagina: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Informacioninicial()),
+                        MaterialPageRoute(builder: (context) =>Informacioninicial()),
                       );
                     },
                     labelname: "Listas",
