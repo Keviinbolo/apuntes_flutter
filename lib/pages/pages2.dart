@@ -25,22 +25,35 @@ class _Pages2State extends State<Pages2> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(Icons.fork_left),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Bienvenido ${widget.nombre}",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold,
+              PersonalizeButtonMovePage(
+                color: Colors.black,
+                labelname: "Atrás",
+                cambioPagina: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pages1()),
+                  );
+                },
+              ),
+              
+              Expanded(
+                // ignore: avoid_unnecessary_containers
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      "Bienvenido ${widget.nombre}",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ],
+                ),
               ),
             ],
           ),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -77,10 +90,7 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text(
-                    "Botones",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: Text("Botones", style: TextStyle(color: Colors.white)),
                 ),
               ),
               GestureDetector(
@@ -142,10 +152,7 @@ class _Pages2State extends State<Pages2> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   color: Colors.black,
-                  child: Text(
-                    "Listas",
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: Text("Listas", style: TextStyle(color: Colors.white)),
                 ),
               ),
             ],

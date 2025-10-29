@@ -4,7 +4,7 @@ class PersonalizeButtonMovePage extends StatelessWidget {
   final String labelname;
   final double fontsize;
   final Color color;
-
+  
   final Function() cambioPagina;
   const PersonalizeButtonMovePage({
     super.key,
