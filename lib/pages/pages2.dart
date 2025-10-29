@@ -1,9 +1,12 @@
 import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
 import 'package:apuntes_flutter/pages/informacionincial.dart';
+
 import 'package:flutter/material.dart';
 
 class Pages2 extends StatefulWidget {
-  const Pages2({super.key});
+  final String nombre ;
+
+  const Pages2({super.key, this.nombre = "Nombre usuario"});
 
   @override
   State<Pages2> createState() => _Pages2State();
@@ -17,7 +20,11 @@ class _Pages2State extends State<Pages2> {
       backgroundColor: Colors.grey[600],
       body: Column(
         children: [
-          Text("Bienvenido$nombre"),
+          Text("Bienvenido ${widget.nombre}",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

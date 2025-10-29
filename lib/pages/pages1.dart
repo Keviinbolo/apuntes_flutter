@@ -66,7 +66,8 @@ class _MyWidgetState extends State<Pages1> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Pages2(),
+                            builder: (context) =>
+                                Pages2(nombre: widget.name.text),
                           ),
                         );
                       },
