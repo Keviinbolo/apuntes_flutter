@@ -3,7 +3,7 @@ import 'package:apuntes_flutter/variablesglobals.dart';
 import 'package:flutter/material.dart';
 
 class Informacioninicial extends StatefulWidget {
-  Informacioninicial({super.key});
+  const Informacioninicial({super.key});
 
   @override
   State<Informacioninicial> createState() => _InformacioninicialState();

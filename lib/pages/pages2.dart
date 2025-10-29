@@ -14,17 +14,19 @@ class _Pages2State extends State<Pages2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[600],
       body: Column(
         children: [
           Text("Bienvenido$nombre"),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               PersonalizeButtonMovePage(
                 cambioPagina: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Informacioninicial(),
+                      builder: (context) => Informacioninicial(),
                     ),
                   );
                 },

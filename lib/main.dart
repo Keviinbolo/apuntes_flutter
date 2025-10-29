@@ -1,4 +1,4 @@
-import 'package:apuntes_flutter/pages/pages1.dart';
+
 import 'package:apuntes_flutter/pages/pages2.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +11,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Pages2(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Pages2());
   }
 }
