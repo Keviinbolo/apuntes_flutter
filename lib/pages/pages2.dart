@@ -4,6 +4,7 @@ import 'package:apuntes_flutter/pages/cambiodepaginas.dart';
 import 'package:apuntes_flutter/pages/columasrowsstacks.dart';
 import 'package:apuntes_flutter/pages/funciones.dart';
 import 'package:apuntes_flutter/pages/informacionincial.dart';
+import 'package:apuntes_flutter/pages/listas.dart';
 import 'package:apuntes_flutter/pages/pages1.dart';
 import 'package:apuntes_flutter/pages/textfields.dart';
 import 'package:apuntes_flutter/pages/widgetspersonalizados.dart';
@@ -54,7 +55,7 @@ class _Pages2State extends State<Pages2> {
     },
     {
       'nombre': 'Listas',
-      'pagina': null, // Aquí puedes poner la página correspondiente
+      'pagina': Listas(),
     },
   ];
 
@@ -103,10 +104,10 @@ class _Pages2State extends State<Pages2> {
               padding: const EdgeInsets.all(20.0),
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, // 2 columnas
-                  crossAxisSpacing: 5, // Espacio entre columnas
-                  mainAxisSpacing: 15, // Espacio entre filas
-                  childAspectRatio: 2.0, // Relación ancho/alto de los items
+                  crossAxisCount: 4, 
+                  crossAxisSpacing: 5, 
+                  mainAxisSpacing: 15, 
+                  childAspectRatio: 2.0, 
                 ),
                 itemCount: botones.length,
                 itemBuilder: (context, index) {
