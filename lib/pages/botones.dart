@@ -8,28 +8,27 @@ class BotonesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[600],
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text(
-          'Botones en Flutter',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      body: Center( // Añadido Center aquí
+      body: Center(
         child: Container(
-          constraints: BoxConstraints(maxWidth: 600), // Ancho máximo para pantallas grandes
+          constraints: BoxConstraints(maxWidth: 600), 
           child: SingleChildScrollView(
             padding: EdgeInsets.all(20),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center, // Cambiado a center
-              mainAxisAlignment: MainAxisAlignment.center, // Añadido para centrar verticalmente
+              crossAxisAlignment: CrossAxisAlignment.center, 
+              mainAxisAlignment: MainAxisAlignment.center, 
               children: [
+                // Título
+                Text(
+                  'Botones en Flutter',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 20),
+
                 // Introducción
                 Card(
                   color: Colors.grey[800],
@@ -38,7 +37,7 @@ class BotonesPage extends StatelessWidget {
                     child: Text(
                       'Los botones son elementos fundamentales en cualquier interfaz de usuario. Flutter ofrece varios tipos de botones predefinidos y también permite crear botones personalizados.',
                       style: TextStyle(color: Colors.white, fontSize: 16),
-                      textAlign: TextAlign.center, // Centrar texto
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -53,13 +52,13 @@ class BotonesPage extends StatelessWidget {
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
-                  textAlign: TextAlign.center, // Centrar texto
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 10),
                 Text(
                   'Este es el botón personalizado que hemos creado y reutilizamos en toda la app:',
                   style: TextStyle(color: Colors.white, fontSize: 16),
-                  textAlign: TextAlign.center, // Centrar texto
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 20),
 
@@ -82,20 +81,20 @@ class BotonesPage extends StatelessWidget {
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   ),
-                  textAlign: TextAlign.center, // Centrar texto
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 15),
                 Text(
                   'Presiona cada botón para ver el mensaje:',
                   style: TextStyle(color: Colors.white, fontSize: 14),
-                  textAlign: TextAlign.center, // Centrar texto
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 15),
 
                 Wrap(
                   spacing: 10,
                   runSpacing: 10,
-                  alignment: WrapAlignment.center, // Centrar los botones en el Wrap
+                  alignment: WrapAlignment.center,
                   children: [
                     PersonalizeButtonMovePage(
                       cambioPagina: () {
@@ -132,7 +131,7 @@ class BotonesPage extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(16),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center, // Cambiado a center
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           'Resumen:',
@@ -141,17 +140,28 @@ class BotonesPage extends StatelessWidget {
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
-                          textAlign: TextAlign.center, // Centrar texto
+                          textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 10),
                         Text(
                           'Hemos explorado los botones en Flutter, incluyendo cómo crear y utilizar un botón personalizado. Los botones son esenciales para la interacción del usuario y Flutter facilita su implementación con una variedad de opciones y estilos.',
                           style: TextStyle(color: Colors.white, fontSize: 14),
-                          textAlign: TextAlign.center, // Centrar texto
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
                   ),
+                ),
+
+                // Botón para regresar
+                SizedBox(height: 30),
+                PersonalizeButtonMovePage(
+                  cambioPagina: () {
+                    Navigator.pop(context);
+                  },
+                  labelname: "Volver Atrás",
+                  fontsize: 16,
+                  color: Colors.white,
                 ),
               ],
             ),
