@@ -2,6 +2,7 @@ import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
 import 'package:apuntes_flutter/pages/botones.dart';
 import 'package:apuntes_flutter/pages/cambiodepaginas.dart';
 import 'package:apuntes_flutter/pages/columasrowsstacks.dart';
+import 'package:apuntes_flutter/pages/funciones.dart';
 import 'package:apuntes_flutter/pages/informacionincial.dart';
 import 'package:apuntes_flutter/pages/pages1.dart';
 import 'package:apuntes_flutter/pages/textfields.dart';
@@ -49,7 +50,7 @@ class _Pages2State extends State<Pages2> {
     },
     {
       'nombre': 'Funciones',
-      'pagina': null, // Aquí puedes poner la página correspondiente
+      'pagina': Funciones(),
     },
     {
       'nombre': 'Listas',
