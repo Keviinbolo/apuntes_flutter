@@ -21,7 +21,7 @@ class _InformacioninicialState extends State<Informacioninicial> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Bienvenido $nombre esta es la informacion principal que debes saber para iniciar con flutter",
+              "Bienvenido esta es la informacion principal que debes saber para iniciar con flutter",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),

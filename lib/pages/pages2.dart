@@ -1,8 +1,9 @@
 import 'package:apuntes_flutter/class/personalize_button_move_page.dart';
+import 'package:apuntes_flutter/pages/botones.dart';
 import 'package:apuntes_flutter/pages/columasrowsstacks.dart';
 import 'package:apuntes_flutter/pages/informacionincial.dart';
 import 'package:apuntes_flutter/pages/pages1.dart';
-
+import 'package:apuntes_flutter/variablesglobals.dart';
 import 'package:flutter/material.dart';
 
 class Pages2 extends StatefulWidget {
@@ -16,12 +17,50 @@ class Pages2 extends StatefulWidget {
 
 class _Pages2State extends State<Pages2> {
   String nombre = "";
+  
+  // Lista de botones con su información
+  final List<Map<String, dynamic>> botones = [
+    {
+      'nombre': 'Informacion Inicial',
+      'pagina': Informacioninicial(),
+    },
+    {
+      'nombre': 'Rows, Columns y Stacks',
+      'pagina': Columasrowsstacks(),
+    },
+    {
+      'nombre': 'Botones',
+      'pagina': BotonesPage(),
+    },
+    {
+      'nombre': 'Cambio de Pagina',
+      'pagina': null, // Aquí puedes poner la página correspondiente
+    },
+    {
+      'nombre': 'TextFields',
+      'pagina': null, // Aquí puedes poner la página correspondiente
+    },
+    {
+      'nombre': 'WidgetPersonalizados',
+      'pagina': null, // Aquí puedes poner la página correspondiente
+    },
+    {
+      'nombre': 'Funciones',
+      'pagina': null, // Aquí puedes poner la página correspondiente
+    },
+    {
+      'nombre': 'Listas',
+      'pagina': null, // Aquí puedes poner la página correspondiente
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[600],
       body: Column(
         children: [
+          // Header con botón de regreso
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -37,8 +76,8 @@ class _Pages2State extends State<Pages2> {
               ),
               
               Expanded(
-                // ignore: avoid_unnecessary_containers
                 child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 20),
                   child: Center(
                     child: Text(
                       "Bienvenido ${widget.nombre}",
@@ -54,108 +93,39 @@ class _Pages2State extends State<Pages2> {
             ],
           ),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              PersonalizeButtonMovePage(
-                cambioPagina: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Informacioninicial(),
-                    ),
+          // GridView con todos los botones
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4, // 2 columnas
+                  crossAxisSpacing: 5, // Espacio entre columnas
+                  mainAxisSpacing: 15, // Espacio entre filas
+                  childAspectRatio: 2.0, // Relación ancho/alto de los items
+                ),
+                itemCount: botones.length,
+                itemBuilder: (context, index) {
+                  return PersonalizeButtonMovePage(
+                    cambioPagina: () {
+                      if (botones[index]['pagina'] != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => botones[index]['pagina'],
+                          ),
+                        );
+                      }
+                      // Si la página es null, puedes agregar un SnackBar o diálogo
+                      // o simplemente no hacer nada hasta que asignes la página
+                    },
+                    labelname: botones[index]['nombre'],
+                    fontsize: 18, // Un poco más pequeño para que quede mejor en el grid
+                    color: Colors.white,
                   );
                 },
-                labelname: "Informacion Inicial",
-                fontsize: 20,
-                color: Colors.white,
               ),
-              PersonalizeButtonMovePage(
-                cambioPagina: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Columasrowsstacks(),
-                    ),
-                  );
-                },
-                labelname: "Rows, Columns y Stacks",
-                fontsize: 20,
-                color: Colors.white,
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Botones", style: TextStyle(color: Colors.white)),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text(
-                    "Cambio de Pagina",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text(
-                    "textFields",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text(
-                    "WidgetPersonalizados",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text(
-                    "Funciones",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {});
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  color: Colors.black,
-                  child: Text("Listas", style: TextStyle(color: Colors.white)),
-                ),
-              ),
-            ],
+            ),
           ),
         ],
       ),
