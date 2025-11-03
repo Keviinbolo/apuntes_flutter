@@ -5,6 +5,7 @@ import 'package:apuntes_flutter/pages/columasrowsstacks.dart';
 import 'package:apuntes_flutter/pages/informacionincial.dart';
 import 'package:apuntes_flutter/pages/pages1.dart';
 import 'package:apuntes_flutter/pages/textfields.dart';
+import 'package:apuntes_flutter/pages/widgetspersonalizados.dart';
 import 'package:apuntes_flutter/variablesglobals.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class _Pages2State extends State<Pages2> {
     },
     {
       'nombre': 'WidgetPersonalizados',
-      'pagina': null, // Aquí puedes poner la página correspondiente
+      'pagina': Widgetspersonalizados(),
     },
     {
       'nombre': 'Funciones',
