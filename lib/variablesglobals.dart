@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Variablesglobals {
-  static String nombre = "";
   static List items = [
     {
       'title': 'Widgets',
