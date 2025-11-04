@@ -8,7 +8,7 @@ import 'package:apuntes_flutter/pages/listas.dart';
 import 'package:apuntes_flutter/pages/pages1.dart';
 import 'package:apuntes_flutter/pages/textfields.dart';
 import 'package:apuntes_flutter/pages/widgetspersonalizados.dart';
-import 'package:apuntes_flutter/variablesglobals.dart';
+
 import 'package:flutter/material.dart';
 
 class Pages2 extends StatefulWidget {
@@ -22,41 +22,17 @@ class Pages2 extends StatefulWidget {
 
 class _Pages2State extends State<Pages2> {
   String nombre = "";
-  
+
   // Lista de botones con su información
   final List<Map<String, dynamic>> botones = [
-    {
-      'nombre': 'Informacion Inicial',
-      'pagina': Informacioninicial(),
-    },
-    {
-      'nombre': 'Rows, Columns y Stacks',
-      'pagina': Columasrowsstacks(),
-    },
-    {
-      'nombre': 'Botones',
-      'pagina': BotonesPage(),
-    },
-    {
-      'nombre': 'Cambio de Pagina',
-      'pagina': Cambiodepaginas(),
-    },
-    {
-      'nombre': 'TextFields',
-      'pagina': Textfields(),
-    },
-    {
-      'nombre': 'WidgetPersonalizados',
-      'pagina': Widgetspersonalizados(),
-    },
-    {
-      'nombre': 'Funciones',
-      'pagina': Funciones(),
-    },
-    {
-      'nombre': 'Listas',
-      'pagina': Listas(),
-    },
+    {'nombre': 'Informacion Inicial', 'pagina': Informacioninicial()},
+    {'nombre': 'Rows, Columns y Stacks', 'pagina': Columasrowsstacks()},
+    {'nombre': 'Botones', 'pagina': BotonesPage()},
+    {'nombre': 'Cambio de Pagina', 'pagina': Cambiodepaginas()},
+    {'nombre': 'TextFields', 'pagina': Textfields()},
+    {'nombre': 'WidgetPersonalizados', 'pagina': Widgetspersonalizados()},
+    {'nombre': 'Funciones', 'pagina': Funciones()},
+    {'nombre': 'Listas', 'pagina': Listas()},
   ];
 
   @override
@@ -79,7 +55,7 @@ class _Pages2State extends State<Pages2> {
                   );
                 },
               ),
-              
+
               Expanded(
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 20),
@@ -104,10 +80,10 @@ class _Pages2State extends State<Pages2> {
               padding: const EdgeInsets.all(20.0),
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, 
-                  crossAxisSpacing: 5, 
-                  mainAxisSpacing: 15, 
-                  childAspectRatio: 2.0, 
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 15,
+                  childAspectRatio: 2.0,
                 ),
                 itemCount: botones.length,
                 itemBuilder: (context, index) {
@@ -121,11 +97,11 @@ class _Pages2State extends State<Pages2> {
                           ),
                         );
                       }
-                      // Si la página es null, puedes agregar un SnackBar o diálogo
-                      // o simplemente no hacer nada hasta que asignes la página
+                      
                     },
                     labelname: botones[index]['nombre'],
-                    fontsize: 18, // Un poco más pequeño para que quede mejor en el grid
+                    fontsize:
+                        18, // Un poco más pequeño para que quede mejor en el grid
                     color: Colors.white,
                   );
                 },

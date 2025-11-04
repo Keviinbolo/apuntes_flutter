@@ -193,7 +193,7 @@ class _TextfieldsState extends State<Textfields> {
                             ),
                             SizedBox(height: 8),
                             Text(
-                              "Contraseña: ${passwordController.text.isNotEmpty ? "••••••" : "No ingresada"}",
+                              "Contraseña: ${passwordController.text.isNotEmpty ? passwordController.text : "No ingresada"}",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
